@@ -1,0 +1,20 @@
+
+.card{
+    width: 300px;
+}
+.card img{
+    width: 300px;
+    height: 220px;
+}
+.detailsimg img{
+    width: 200px;
+    height: 170px;
+}
+.search{
+    width: 300px;
+}
+
+.search input{
+    padding: 10px;
+    font-size: 19px;
+}
