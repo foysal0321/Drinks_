@@ -25,7 +25,7 @@ let proSearch = (datalimit)=>{
     sniperAdd(true)
     let inpfil = document.getElementById('inpfil');
     let val = inpfil.value;
-    allData(val,datalimit);
+    allData(val,datalimit); 
 }
 
 //10 data search
@@ -87,12 +87,18 @@ let dataDetails = (id)=>{
 // modal data details show
 let displayDataDetails = (data)=>{
     data.forEach( d =>{
+    let {strDrinkThumb,strDrink} = d
+
     let modal = document.getElementById('modalDel')
-    modal.innerHTML = ''
+    modal.innerHTML = '';
+
+    let title = document.getElementById('title');
+    title.innerText = strDrink;
+
     let div = document.createElement('div')
     div.classList.add('detailsimg')
     div.innerHTML = `
-    <img src="${d.strDrinkThumb}" alt="">
+    <img src="${strDrinkThumb}" alt="">
     <p>${d.strInstructions.slice(0,80)}</p>
     `
     modal.appendChild(div);
